@@ -1,20 +1,30 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Countdown from "./Countdown";
 
 export default function ParallaxPostcard() {
   const ref = useRef(null);
+  const [imgError, setImgError] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section ref={ref} className="relative h-screen overflow-hidden">
-      {/* Placeholder gradient until user places public/images/couple.jpg */}
-      <motion.div style={{ y }} className="absolute inset-0 bg-gradient-to-br from-traditional-firoozeh via-traditional-gold to-gold" />
+      <motion.div style={{ y }} className={`absolute inset-0 ${imgError ? "bg-gradient-to-br from-traditional-firoozeh via-traditional-gold to-gold" : ""}`}>
+        {!imgError && (
+          <img
+            src="/images/couple.jpg"
+            alt="عقد"
+            className="w-full h-full object-cover"
+            onError={() => setImgError(true)}
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+      </motion.div>
 
       <motion.div style={{ opacity }} className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
         <h1 className="font-nastaligh text-5xl md:text-7xl mb-4 text-gold">
