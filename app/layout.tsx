@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="min-h-screen bg-cream text-gray-900">
+      <body className="min-h-screen bg-cream text-gray-900 bg-pattern">
         {children}
         <MusicToggle />
       </body>
