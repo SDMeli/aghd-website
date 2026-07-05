@@ -1,22 +1,35 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { fetchAlbumMediaItems } from "@/lib/google-photos";
+import { CldImage } from "next-cloudinary";
 
-interface MediaItem {
+interface GalleryItem {
   id: string;
-  baseUrl: string;
-  filename: string;
-  description?: string;
+  url: string;
+  width: number;
+  height: number;
 }
 
 export default function PersianGallery() {
-  const [items, setItems] = useState<MediaItem[]>([]);
+  const [items, setItems] = useState<GalleryItem[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchAlbumMediaItems().then(setItems).catch(() => {});
+    fetch("/api/photos")
+      .then((r) => r.json())
+      .then((data) => setItems(data.items))
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center py-16 text-gray-500">
+        <p>در حال بارگذاری...</p>
+      </div>
+    );
+  }
 
   if (items.length === 0) {
     return (
@@ -33,10 +46,17 @@ export default function PersianGallery() {
         {items.map((item) => (
           <div
             key={item.id}
-            onClick={() => setSelected(item.baseUrl)}
+            onClick={() => setSelected(item.id)}
             className="aspect-square rounded-xl overflow-hidden cursor-pointer hover:opacity-90 transition"
           >
-            <img src={`${item.baseUrl}=w400-h400`} alt={item.filename} className="w-full h-full object-cover" />
+            <CldImage
+              src={item.id}
+              alt=""
+              width={400}
+              height={400}
+              crop="fill"
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
       </div>
@@ -46,7 +66,14 @@ export default function PersianGallery() {
           onClick={() => setSelected(null)}
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
         >
-          <img src={`${selected}=w1200`} alt="" className="max-w-full max-h-full rounded-2xl" />
+          <CldImage
+            src={selected}
+            alt=""
+            width={1200}
+            height={900}
+            crop="fit"
+            className="max-w-full max-h-full rounded-2xl"
+          />
         </div>
       )}
     </>

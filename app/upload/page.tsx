@@ -1,5 +1,5 @@
 import Link from "next/link";
-import UploadZone from "@/components/UploadZone";
+import ClientUploadZone from "@/components/ClientUploadZone";
 
 export default function UploadPage() {
   return (
@@ -14,7 +14,7 @@ export default function UploadPage() {
         <p className="text-center text-gray-500 mb-8">
           عکس و فیلم‌هایی که از این شب گرفتید رو برامون بفرستید
         </p>
-        <UploadZone />
+        <ClientUploadZone />
       </div>
     </div>
   );
