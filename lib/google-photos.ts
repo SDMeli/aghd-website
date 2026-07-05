@@ -60,3 +60,29 @@ export async function uploadToGooglePhotos(file: File, guestName?: string) {
 
   return await createResponse.json();
 }
+
+export async function fetchAlbumMediaItems() {
+  if (!ALBUM_ID || !API_KEY) {
+    console.warn("Google Photos credentials not configured");
+    return [];
+  }
+
+  const res = await fetch(
+    `https://photoslibrary.googleapis.com/v1/albums/${ALBUM_ID}/mediaItems?pageSize=50&key=${API_KEY}`
+  );
+
+  if (!res.ok) {
+    console.warn("Failed to fetch album media items:", res.statusText);
+    return [];
+  }
+
+  const data = await res.json();
+  return (data.mediaItems || []) as MediaItem[];
+}
+
+interface MediaItem {
+  id: string;
+  baseUrl: string;
+  filename: string;
+  description?: string;
+}
