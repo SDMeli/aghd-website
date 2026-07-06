@@ -17,23 +17,26 @@ export default function HeroSection() {
             onError={() => setImgError(true)}
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2B1D14]/85 via-[#2B1D14]/20 to-[#2B1D14]/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2B1D14]/50 via-[#2B1D14]/10 to-[#2B1D14]/40" />
         {imgError && (
           <div className="absolute inset-0 bg-gradient-to-br from-gold/60 via-gold/30 to-espresso/80" />
         )}
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="font-nastaligh text-5xl md:text-7xl lg:text-8xl text-gold mb-3 leading-relaxed">
-          صادق و ملیکا
-        </h1>
-        <div className="w-16 h-px bg-gold/40 mb-6" />
-        <p className="font-amiri text-white/80 text-lg md:text-xl max-w-md leading-relaxed">
-          سلام. با قدم‌های زیباتون شروع زندگیمون رو جشن می‌گیریم
-        </p>
-        <div className="mt-10">
-          <Countdown targetDate="2026-08-30T18:00:00" />
+        <div className="bg-cream/10 backdrop-blur-xl border border-white/15 rounded-3xl px-8 py-12 md:px-12 md:py-14 max-w-lg w-full shadow-2xl shadow-black/10">
+          <h1 className="font-nastaligh text-5xl md:text-7xl lg:text-8xl text-gold mb-3 leading-relaxed">
+            صادق و ملیکا
+          </h1>
+          <div className="w-16 h-px bg-gold/40 mx-auto mb-6" />
+          <p className="font-amiri text-white/90 text-lg md:text-xl max-w-sm mx-auto leading-relaxed">
+            سلام. با قدم‌های زیباتون شروع زندگیمون رو جشن می‌گیریم
+          </p>
+          <div className="mt-8">
+            <Countdown targetDate="2026-08-30T18:00:00" />
+          </div>
         </div>
+
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <svg
             width="20"
