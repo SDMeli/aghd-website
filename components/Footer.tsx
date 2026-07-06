@@ -2,7 +2,7 @@ import EslimiDivider from "./EslimiDivider";
 
 export default function Footer() {
   return (
-    <footer className="bg-cream pb-10 px-6">
+    <footer className="bg-cream px-6 py-10">
       <EslimiDivider />
       <div className="text-center">
         <p className="font-nastaligh text-gold text-xl md:text-2xl">

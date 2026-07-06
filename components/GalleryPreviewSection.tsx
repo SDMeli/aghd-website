@@ -19,7 +19,7 @@ export default function GalleryPreviewSection() {
   }, []);
 
   return (
-    <section className="bg-cream py-16 md:py-24 px-6">
+    <div className="flex flex-col items-center justify-center h-full px-6">
       <div className="max-w-3xl mx-auto text-center">
         <p className="font-markazi text-gold text-lg mb-2 tracking-widest">خاطرات</p>
         <h2 className="font-markazi text-3xl md:text-4xl text-espresso mb-10">
@@ -57,6 +57,6 @@ export default function GalleryPreviewSection() {
           </svg>
         </Link>
       </div>
-    </section>
+    </div>
   );
 }

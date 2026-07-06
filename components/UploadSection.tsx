@@ -33,7 +33,7 @@ export default function UploadSection() {
   };
 
   return (
-    <section className="bg-cream py-16 md:py-24 px-6">
+    <div className="flex flex-col items-center justify-center h-full px-6">
       <div className="max-w-lg mx-auto text-center">
         <p className="font-markazi text-gold text-lg mb-2 tracking-widest">خاطره</p>
         <h2 className="font-markazi text-3xl md:text-4xl text-espresso mb-4">
@@ -84,6 +84,6 @@ export default function UploadSection() {
           </>
         )}
       </div>
-    </section>
+    </div>
   );
 }
