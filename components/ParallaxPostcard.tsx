@@ -27,7 +27,7 @@ export default function ParallaxPostcard() {
       </motion.div>
 
       <motion.div style={{ opacity }} className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
-        <h1 className="font-nastaligh text-5xl md:text-7xl mb-4 text-gold">
+        <h1 className="font-nastaligh text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 text-gold leading-relaxed">
           به مراسم عقد ما خوش آمدید
         </h1>
         <p className="text-lg md:text-xl text-white/80 mb-2">

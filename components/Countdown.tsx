@@ -26,7 +26,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate]);
 
   return (
-    <div className="flex gap-4 mt-4 text-white justify-center">
+    <div dir="ltr" className="flex gap-4 mt-4 text-white justify-center">
       {Object.entries(timeLeft).map(([key, val]) => (
         <div key={key} className="text-center">
           <div className="text-3xl font-bold bg-white/10 backdrop-blur rounded-lg px-4 py-2">{val}</div>

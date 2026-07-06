@@ -23,14 +23,23 @@ export default function MusicToggle() {
         await audio.play();
         setIsPlaying(true);
       } catch {
-        // Autoplay blocked or audio file missing
+        // Autoplay blocked — will start on user interaction
       }
     };
     play();
 
+    const handleInteraction = () => {
+      if (!audio.paused) return;
+      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+    };
+    document.addEventListener("click", handleInteraction, { once: true });
+    document.addEventListener("touchstart", handleInteraction, { once: true });
+
     return () => {
       audio.pause();
       audioRef.current = null;
+      document.removeEventListener("click", handleInteraction);
+      document.removeEventListener("touchstart", handleInteraction);
     };
   }, []);
 
