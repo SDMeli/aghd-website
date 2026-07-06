@@ -28,7 +28,7 @@ export default function HeroSection() {
           صادق و ملیکا
         </h1>
         <div className="w-16 h-px bg-gold/40 mb-6" />
-        <p className="font-amiri text-espresso/80 text-lg md:text-xl max-w-md leading-relaxed">
+        <p className="font-amiri text-espresso text-lg md:text-xl max-w-md leading-relaxed">
           سلام. با قدم‌های زیباتون شروع زندگیمون رو جشن می‌گیریم
         </p>
         <div className="mt-10">

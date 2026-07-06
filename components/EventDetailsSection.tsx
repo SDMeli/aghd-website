@@ -28,8 +28,8 @@ export default function EventDetailsSection() {
                 <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
             </div>
-            <p className="text-espresso/80 font-amiri text-lg">تاریخ و ساعت</p>
-            <p className="text-espresso/60 text-sm mt-1">۸ شهریور ۱۴۰۵، ساعت ۱۸:۰۰</p>
+            <p className="text-espresso font-amiri text-lg">تاریخ و ساعت</p>
+            <p className="text-espresso/70 text-sm mt-1">۸ شهریور ۱۴۰۵، ساعت ۱۸:۰۰</p>
           </div>
 
           <div className="w-12 h-px bg-gold/30 mx-auto" />
@@ -41,8 +41,8 @@ export default function EventDetailsSection() {
                 <circle cx="12" cy="10" r="3" />
               </svg>
             </div>
-            <p className="text-espresso/80 font-amiri text-lg">مکان</p>
-            <p className="text-espresso/60 text-sm mt-1">شیراز، هتل بوتیک آلان</p>
+            <p className="text-espresso font-amiri text-lg">مکان</p>
+            <p className="text-espresso/70 text-sm mt-1">شیراز، هتل بوتیک آلان</p>
           </div>
         </div>
 
