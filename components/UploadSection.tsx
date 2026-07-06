@@ -59,7 +59,6 @@ export default function UploadSection() {
               ref={inputRef}
               type="file"
               accept="image/*,video/*"
-              capture="environment"
               className="hidden"
               onChange={handleFile}
             />

@@ -52,7 +52,6 @@ export default function UploadZone() {
         ref={inputRef}
         type="file"
         accept="image/*,video/*"
-        capture="environment"
         className="hidden"
         onChange={handleFile}
       />
