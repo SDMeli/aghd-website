@@ -24,7 +24,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="font-nastaligh text-5xl md:text-7xl lg:text-8xl text-espresso mb-3 leading-relaxed">
+        <h1 className="font-nastaligh text-5xl md:text-7xl lg:text-8xl text-amber-dark mb-3 leading-relaxed">
           صادق و ملیکا
         </h1>
         <div className="w-16 h-px bg-gold/40 mb-6" />

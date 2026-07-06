@@ -31,7 +31,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
     <div dir="ltr" className="flex gap-3 md:gap-4 justify-center">
       {Object.entries(timeLeft).map(([key, val]) => (
         <div key={key} className="text-center">
-          <div className="text-2xl md:text-4xl font-bold text-gold min-w-[3rem] md:min-w-[4rem]">
+          <div className="text-2xl md:text-4xl font-bold text-amber-dark min-w-[3rem] md:min-w-[4rem]">
             {String(val).padStart(2, "0")}
           </div>
            <div className="text-[10px] md:text-xs mt-1 text-espresso/70">

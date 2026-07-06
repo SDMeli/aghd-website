@@ -70,7 +70,7 @@ export default function MemorySection() {
         <h2 className="font-markazi text-3xl md:text-4xl text-espresso mb-8">
           آپلود عکس و فیلم
         </h2>
-        <p className="text-espresso/60 text-sm mb-8 max-w-sm mx-auto leading-relaxed">
+        <p className="text-espresso/70 text-sm mb-8 max-w-sm mx-auto leading-relaxed">
           اگه از این شب عکس یا فیلمی گرفتی، برامون بفرست تا برای همیشه بمونه
         </p>
 
@@ -90,7 +90,7 @@ export default function MemorySection() {
               </svg>
             </div>
             <p className="text-espresso font-medium">در حال آپلود...</p>
-            <p className="text-espresso/50 text-sm mt-1">لطفاً صفحه رو نبند</p>
+            <p className="text-espresso/70 text-sm mt-1">لطفاً صفحه رو نبند</p>
           </div>
         ) : done ? (
           <div className="mb-12">
@@ -100,7 +100,7 @@ export default function MemorySection() {
               </svg>
             </div>
             <p className="text-espresso font-medium">سپاسگزاریم!</p>
-            <p className="text-espresso/50 text-sm mt-1">عکست با موفقیت آپلود شد</p>
+            <p className="text-espresso/70 text-sm mt-1">عکست با موفقیت آپلود شد</p>
             <button
               onClick={() => { setDone(false); setNewPhotoId(null); }}
               className="mt-4 inline-flex items-center gap-2 text-gold text-sm font-medium hover:text-gold/80 transition-colors"

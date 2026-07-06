@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-cream px-6 py-10">
       <EslimiDivider />
       <div className="text-center">
-        <p className="font-nastaligh text-gold text-xl md:text-2xl">
+        <p className="font-nastaligh text-amber-dark text-xl md:text-2xl">
           صادق و ملیکا
         </p>
         <p className="text-espresso/40 text-xs mt-2">

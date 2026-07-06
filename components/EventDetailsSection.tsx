@@ -14,7 +14,7 @@ export default function EventDetailsSection() {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <p className="font-markazi text-gold text-lg mb-2 tracking-widest">مکان مراسم</p>
-        <h2 className="font-markazi text-3xl md:text-4xl text-espresso mb-10">
+        <h2 className="font-markazi text-3xl md:text-4xl text-amber-dark mb-10">
           هتل بوتیک آلان
         </h2>
 
