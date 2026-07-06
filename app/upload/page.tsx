@@ -8,7 +8,7 @@ export default function UploadPage() {
         <Link href="/" className="text-traditional-firoozeh mb-8 block">
           ← بازگشت
         </Link>
-        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-2 text-center">
+        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-6 text-center leading-relaxed">
           آپلود خاطرات
         </h1>
         <p className="text-center text-gray-500 mb-8">

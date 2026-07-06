@@ -12,14 +12,14 @@ export default function MapPage() {
           ← بازگشت
         </Link>
 
-        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-2 text-center">
+        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-6 text-center leading-relaxed">
           مسیریابی
         </h1>
         <p className="text-center text-gray-500 mb-8">محل برگزاری مراسم عقد</p>
 
         <div className="bg-white rounded-2xl shadow-md overflow-hidden mb-6">
           <iframe
-            src={`https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_API_KEY&q=${lat},${lng}&language=fa`}
+            src={`https://www.google.com/maps?q=${lat},${lng}&output=embed`}
             className="w-full h-80"
             allowFullScreen
             loading="lazy"

@@ -8,7 +8,7 @@ export default function GalleryPage() {
         <Link href="/" className="text-traditional-firoozeh mb-8 block">
           ← بازگشت
         </Link>
-        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-8 text-center">
+        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-12 md:mb-8 text-center leading-relaxed">
           گالری خاطرات
         </h1>
         <PersianGallery />

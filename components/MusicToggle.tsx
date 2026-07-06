@@ -23,23 +23,32 @@ export default function MusicToggle() {
         await audio.play();
         setIsPlaying(true);
       } catch {
-        // Autoplay blocked — will start on user interaction
+        // Autoplay blocked — retry strategies below
       }
     };
     play();
 
-    const handleInteraction = () => {
-      if (!audio.paused) return;
-      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+    const retryPlay = () => {
+      if (audio.paused) {
+        audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      }
     };
-    document.addEventListener("click", handleInteraction, { once: true });
-    document.addEventListener("touchstart", handleInteraction, { once: true });
+
+    document.addEventListener("scroll", retryPlay, { once: true });
+    document.addEventListener("touchstart", retryPlay, { once: true });
+    document.addEventListener("click", retryPlay, { once: true });
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible" && audio.paused) {
+        audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      }
+    });
 
     return () => {
       audio.pause();
       audioRef.current = null;
-      document.removeEventListener("click", handleInteraction);
-      document.removeEventListener("touchstart", handleInteraction);
+      document.removeEventListener("scroll", retryPlay);
+      document.removeEventListener("touchstart", retryPlay);
+      document.removeEventListener("click", retryPlay);
     };
   }, []);
 

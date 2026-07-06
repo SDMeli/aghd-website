@@ -34,7 +34,7 @@ export default function ParallaxPostcard() {
           سلام. با قدم‌های زیباتون شروع زندگیمون رو جشن می‌گیریم
         </p>
         <p className="text-lg md:text-xl text-white/80 mb-2">
-          صادق & ملیکا
+          صادق و ملیکا
         </p>
         <Countdown targetDate="2026-08-30T18:00:00" />
         <div className="flex gap-4 mt-8">
