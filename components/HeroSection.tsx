@@ -17,7 +17,7 @@ export default function HeroSection() {
             onError={() => setImgError(true)}
           />
         )}
-        <div className="absolute inset-0 bg-white/25" />
+        <div className="absolute inset-0 bg-white/40" />
         {imgError && (
           <div className="absolute inset-0 bg-gradient-to-br from-gold/60 via-gold/30 to-espresso/80" />
         )}

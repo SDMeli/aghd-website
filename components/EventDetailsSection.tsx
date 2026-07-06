@@ -9,7 +9,7 @@ export default function EventDetailsSection() {
           alt="هتل بوتیک آلان"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-white/25" />
+        <div className="absolute inset-0 bg-white/40" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
