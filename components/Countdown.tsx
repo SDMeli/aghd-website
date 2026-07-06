@@ -11,6 +11,8 @@ export default function Countdown({ targetDate }: CountdownProps) {
 
   useEffect(() => {
     const target = new Date(targetDate).getTime();
+    if (isNaN(target)) return;
+
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const diff = target - now;
@@ -26,11 +28,15 @@ export default function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate]);
 
   return (
-    <div dir="ltr" className="flex gap-4 mt-4 text-white justify-center">
+    <div dir="ltr" className="flex gap-3 md:gap-4 justify-center">
       {Object.entries(timeLeft).map(([key, val]) => (
         <div key={key} className="text-center">
-          <div className="text-3xl font-bold bg-white/10 backdrop-blur rounded-lg px-4 py-2">{val}</div>
-          <div className="text-xs mt-1 text-white/60">{key === "days" ? "روز" : key === "hours" ? "ساعت" : key === "minutes" ? "دقیقه" : "ثانیه"}</div>
+          <div className="text-2xl md:text-4xl font-bold text-gold min-w-[3rem] md:min-w-[4rem]">
+            {String(val).padStart(2, "0")}
+          </div>
+          <div className="text-[10px] md:text-xs mt-1 text-white/50">
+            {key === "days" ? "روز" : key === "hours" ? "ساعت" : key === "minutes" ? "دقیقه" : "ثانیه"}
+          </div>
         </div>
       ))}
     </div>

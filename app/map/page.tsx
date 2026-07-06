@@ -1,4 +1,5 @@
-import Link from "next/link";
+import BackButton from "@/components/BackButton";
+import EslimiDivider from "@/components/EslimiDivider";
 
 export default function MapPage() {
   const lat = 29.61046060982822;
@@ -6,18 +7,15 @@ export default function MapPage() {
   const address = encodeURIComponent("شیراز، هتل بوتیک آلان");
 
   return (
-    <div className="min-h-screen bg-cream relative">
-      <Link href="/" className="absolute top-4 left-4 z-10 text-traditional-firoozeh bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-md">
-        ← بازگشت
-      </Link>
-      <div className="max-w-lg mx-auto px-6 py-16">
-
-        <h1 className="font-nastaligh text-4xl text-traditional-gold mb-6 text-center leading-relaxed">
+    <div className="min-h-screen bg-cream">
+      <BackButton />
+      <div className="max-w-lg mx-auto px-6 py-20">
+        <h1 className="font-markazi text-4xl text-espresso mb-6 text-center">
           مسیریابی
         </h1>
-        <p className="text-center text-gray-500 mb-8">محل برگزاری مراسم عقد</p>
+        <p className="text-center text-espresso/50 text-sm mb-8">محل برگزاری مراسم عقد</p>
 
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden mb-6">
+        <div className="bg-white rounded-2xl shadow-sm overflow-hidden mb-6">
           <iframe
             src={`https://www.google.com/maps?q=${lat},${lng}&output=embed`}
             className="w-full h-80"
@@ -26,28 +24,34 @@ export default function MapPage() {
           />
         </div>
 
-        <div className="bg-white rounded-2xl shadow-md p-6 text-center">
-          <p className="font-bold text-lg">آدرس:</p>
-          <p className="text-gray-600 mt-1">شیراز، هتل بوتیک آلان</p>
+        <div className="bg-white rounded-2xl shadow-sm p-6 text-center">
+          <p className="text-espresso font-medium">آدرس:</p>
+          <p className="text-espresso/60 mt-1">شیراز، هتل بوتیک آلان</p>
         </div>
 
-        <div className="mt-6 flex gap-4 justify-center">
+        <div className="mt-6 flex gap-3 justify-center flex-wrap">
           <a
             href={`https://maps.google.com/?q=${lat},${lng}`}
             target="_blank"
-            className="bg-traditional-firoozeh text-white px-6 py-3 rounded-full font-bold"
+            className="inline-flex items-center gap-2 bg-gold text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gold/90 transition-colors"
           >
-            باز کردن در Google Maps
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+              <line x1="8" y1="2" x2="8" y2="18" />
+              <line x1="16" y1="6" x2="16" y2="22" />
+            </svg>
+            Google Maps
           </a>
           <a
             href={`https://maps.apple.com/?ll=${lat},${lng}&q=${address}`}
             target="_blank"
-            className="border border-traditional-firoozeh text-traditional-firoozeh px-6 py-3 rounded-full font-bold"
+            className="inline-flex items-center gap-2 border border-espresso/20 text-espresso px-6 py-3 rounded-full text-sm font-medium hover:bg-espresso/5 transition-colors"
           >
             Apple Maps
           </a>
         </div>
       </div>
+      <EslimiDivider />
     </div>
   );
 }

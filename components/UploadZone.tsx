@@ -34,10 +34,14 @@ export default function UploadZone() {
 
   if (done) {
     return (
-      <div className="text-center py-16">
-        <div className="text-6xl mb-4">🙏</div>
-        <h2 className="text-2xl font-bold mb-2">سپاسگزاریم!</h2>
-        <p className="text-gray-600">عکس‌هاتون با موفقیت آپلود شد.</p>
+      <div className="text-center py-8">
+        <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gold">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h2 className="text-espresso font-medium">سپاسگزاریم!</h2>
+        <p className="text-espresso/50 text-sm mt-1">عکست با موفقیت آپلود شد</p>
       </div>
     );
   }
@@ -55,11 +59,22 @@ export default function UploadZone() {
       <button
         onClick={() => inputRef.current?.click()}
         disabled={uploading}
-        className="bg-traditional-gold text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:bg-traditional-gold/80 transition disabled:opacity-50"
+        className="inline-flex items-center gap-2 bg-gold text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-gold/90 transition-colors disabled:opacity-50"
       >
-        {uploading ? "در حال آپلود..." : "📸 انتخاب عکس"}
+        {uploading ? (
+          "در حال آپلود..."
+        ) : (
+          <>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+            انتخاب عکس یا فیلم
+          </>
+        )}
       </button>
-      <p className="text-gray-500 mt-4 text-sm">عکس یا فیلم مورد نظرت رو انتخاب کن</p>
+      <p className="text-espresso/40 text-sm mt-4">عکس یا فیلم مورد نظرت رو انتخاب کن</p>
     </div>
   );
 }

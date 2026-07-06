@@ -3,14 +3,14 @@ import "./globals.css";
 import MusicToggle from "@/components/MusicToggle";
 
 export const metadata: Metadata = {
-  title: "دعوت عقد",
-  description: "به مراسم عقد ما خوش آمدید",
+  title: "عقد صادق و ملیکا",
+  description: "۸ شهریور ۱۴۰۵ - هتل بوتیک آلان، شیراز",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="min-h-screen bg-cream text-gray-900 bg-pattern">
+      <body className="min-h-screen bg-cream text-espresso">
         {children}
         <MusicToggle />
       </body>
