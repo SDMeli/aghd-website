@@ -24,7 +24,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <div className="bg-white/3 backdrop-blur-md border border-white/5 rounded-3xl px-6 py-8 md:px-8 md:py-10 max-w-lg w-full">
+        <div className="bg-transparent backdrop-blur-sm border border-white/3 rounded-3xl px-6 py-8 md:px-8 md:py-10 max-w-lg w-full">
           <h1 className="font-nastaligh text-5xl md:text-7xl lg:text-8xl text-gold mb-3 leading-relaxed">
             صادق و ملیکا
           </h1>

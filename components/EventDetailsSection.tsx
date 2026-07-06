@@ -13,7 +13,7 @@ export default function EventDetailsSection() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <div className="bg-white/3 backdrop-blur-md border border-white/5 rounded-3xl px-6 py-8 md:px-8 md:py-10 max-w-lg w-full">
+        <div className="bg-transparent backdrop-blur-sm border border-white/3 rounded-3xl px-6 py-8 md:px-8 md:py-10 max-w-lg w-full">
           <p className="font-markazi text-gold text-lg mb-2 tracking-widest">مکان مراسم</p>
           <h2 className="font-markazi text-3xl md:text-4xl text-white mb-10">
             هتل بوتیک آلان
