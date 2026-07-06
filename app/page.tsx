@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import EventDetailsSection from "@/components/EventDetailsSection";
-import UploadSection from "@/components/UploadSection";
-import GalleryPreviewSection from "@/components/GalleryPreviewSection";
+import MemorySection from "@/components/MemorySection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,11 +12,8 @@ export default function Home() {
       <section className="snap-start snap-always h-dvh">
         <EventDetailsSection />
       </section>
-      <section className="snap-start snap-always h-dvh">
-        <UploadSection />
-      </section>
-      <section className="snap-start snap-always h-dvh">
-        <GalleryPreviewSection />
+      <section className="snap-start snap-always">
+        <MemorySection />
       </section>
       <section className="snap-end">
         <Footer />
