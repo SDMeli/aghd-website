@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 export default function MapPage() {
-  const address = encodeURIComponent("[آدرس محل برگزاری مراسم]");
+  const lat = 29.61046060982822;
+  const lng = 52.54895137987213;
+  const address = encodeURIComponent("شیراز، هتل بوتیک آلان");
 
   return (
     <div className="min-h-screen bg-cream">
@@ -17,7 +19,7 @@ export default function MapPage() {
 
         <div className="bg-white rounded-2xl shadow-md overflow-hidden mb-6">
           <iframe
-            src={`https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_API_KEY&q=${address}&language=fa`}
+            src={`https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_API_KEY&q=${lat},${lng}&language=fa`}
             className="w-full h-80"
             allowFullScreen
             loading="lazy"
@@ -26,19 +28,19 @@ export default function MapPage() {
 
         <div className="bg-white rounded-2xl shadow-md p-6 text-center">
           <p className="font-bold text-lg">آدرس:</p>
-          <p className="text-gray-600 mt-1">[آدرس کامل محل برگزاری]</p>
+          <p className="text-gray-600 mt-1">شیراز، هتل بوتیک آلان</p>
         </div>
 
         <div className="mt-6 flex gap-4 justify-center">
           <a
-            href={`https://maps.google.com/?q=${address}`}
+            href={`https://maps.google.com/?q=${lat},${lng}`}
             target="_blank"
             className="bg-traditional-firoozeh text-white px-6 py-3 rounded-full font-bold"
           >
             باز کردن در Google Maps
           </a>
           <a
-            href={`https://maps.apple.com/?q=${address}`}
+            href={`https://maps.apple.com/?ll=${lat},${lng}&q=${address}`}
             target="_blank"
             className="border border-traditional-firoozeh text-traditional-firoozeh px-6 py-3 rounded-full font-bold"
           >

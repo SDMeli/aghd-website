@@ -30,10 +30,13 @@ export default function ParallaxPostcard() {
         <h1 className="font-nastaligh text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 text-gold leading-relaxed">
           به مراسم عقد ما خوش آمدید
         </h1>
+        <p className="text-base sm:text-lg md:text-xl text-white/80 mb-4 max-w-md leading-relaxed">
+          سلام. با قدم‌های زیباتون شروع زندگیمون رو جشن می‌گیریم
+        </p>
         <p className="text-lg md:text-xl text-white/80 mb-2">
           صادق & ملیکا
         </p>
-        <Countdown targetDate="2026-09-15T18:00:00" />
+        <Countdown targetDate="2026-08-30T18:00:00" />
         <div className="flex gap-4 mt-8">
           <Link href="/events" className="bg-gold text-white px-6 py-3 rounded-full font-bold hover:bg-gold/80 transition">
             جزئیات مراسم
